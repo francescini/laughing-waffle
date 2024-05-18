@@ -3,19 +3,19 @@
 Laaughing Waffle is a repository of systems safety engineering methodologies to use to help develop safer and more responsible AI applications built on top of Large Language Models (LLMs).
 
 
-## Methodologies in scope
+# Methodologies in scope
 
-### 1. Fault Tree Analysis (FTA)
+## 1. Fault Tree Analysis (FTA)
 FTA is a top-down approach to identify potential causes of system failures.
 
 An fault tree has been created for potential LLM failures [here].
 
-#### Explanation
+### Explanation
 **Top-Level Failure:** Represents the overall potential failure of the LLM.
 **Intermediate Failures:** Breaks down into major failure modes: generating harmful content, privacy breaches, and biased outputs.
 **Basic Causes:** Further breaks down into more specific causes, identifying root issues that contribute to each intermediate failure.
 
-#### Application
+### Application
 This fault tree helps identify where to focus safety efforts in the development and deployment of LLMs:
 
 **Data Management:** Improve data filtering, anonymization, and bias mitigation.
@@ -25,7 +25,7 @@ This fault tree helps identify where to focus safety efforts in the development 
 
 By systematically addressing each node in the fault tree, developers can implement robust safety measures to mitigate potential failures in LLMs.
 
-### 2. Failure Modes and Effects Analysis (FMEA)
+## 2. Failure Modes and Effects Analysis (FMEA)
 FMEA is a systematic method for evaluating processes to identify where and how they might fail and assessing the relative impact of different failures.
 
 Application to LLMs:
@@ -34,7 +34,7 @@ List Potential Failures: Identify various ways LLMs can fail, such as producing 
 Assess Impact and Likelihood: Evaluate the severity, occurrence, and detectability of each failure mode.
 Prioritize Mitigation Strategies: Focus on high-priority issues to implement safety measures like improved training data curation, bias mitigation techniques, and robust validation procedures.
 
-### 3. Hazard Analysis and Critical Control Points (HACCP)
+## 3. Hazard Analysis and Critical Control Points (HACCP)
 HACCP is used to identify critical points where hazards might occur and implement control measures to prevent or mitigate these hazards.
 
 Application to LLMs:
@@ -42,7 +42,7 @@ Application to LLMs:
 Identify Critical Points: Determine stages in the LLM lifecycle where hazards might arise, such as data collection, model training, or deployment.
 Establish Control Measures: Implement controls such as filtering training data, continuous monitoring of model outputs, and human oversight in critical applications.
 
-### 4. Preliminary Hazard Analysis (PHA)
+## 4. Preliminary Hazard Analysis (PHA)
 PHA is an early-phase risk assessment tool used to identify potential hazards and analyze the severity of their consequences.
 
 Application to LLMs:
@@ -50,7 +50,7 @@ Application to LLMs:
 Early Risk Identification: Conduct a PHA during the design phase of the LLM to identify potential hazards related to data bias, misinformation, or ethical concerns.
 Mitigation Planning: Develop mitigation strategies early in the development process to address identified hazards.
 
-### 5. Human Reliability Analysis (HRA)
+## 5. Human Reliability Analysis (HRA)
 HRA focuses on understanding the potential for human error within a system and designing systems to reduce these errors.
 
 Application to LLMs:
@@ -58,7 +58,7 @@ Application to LLMs:
 User Interaction Analysis: Evaluate how users interact with LLMs and identify potential areas where human error could lead to unsafe outcomes.
 Design for Safety: Develop user interfaces and interaction protocols that minimize the risk of misinterpretation or misuse of LLM outputs.
 
-### 6. System-Theoretic Process Analysis (STPA)
+## 6. System-Theoretic Process Analysis (STPA)
 STPA is a methodology for identifying unsafe control actions and analyzing how system interactions can lead to hazards.
 
 Application to LLMs:
@@ -67,7 +67,7 @@ Control Actions Analysis: Identify unsafe control actions in the LLM's decision-
 Interaction Analysis: Analyze interactions between the LLM and other system components (e.g., users, external systems) to identify potential safety risks.
 Implement Controls: Design controls to prevent or mitigate identified unsafe actions and interactions.
 
-### 7. Safety Case Development
+## 7. Safety Case Development
 A safety case is a structured argument, supported by evidence, that a system is safe for a specific application in a specific environment.
 
 Application to LLMs:
@@ -76,83 +76,9 @@ Develop Safety Cases: Create safety cases for different use scenarios of LLMs, s
 Evidence Collection: Gather evidence from testing, validation, and operational data to support safety claims.
 Continuous Evaluation: Regularly update the safety case as new data and insights are gained from LLM deployment and use.
 
-### Prerequisites
-
-Requirements for the software and other tools to build, test and push 
-- [Example 1](https://www.example.com)
-- [Example 2](https://www.example.com)
-
-### Installing
-
-A step by step series of examples that tell you how to get a development
-environment running
-
-Say what the step will be
-
-    Give the example
-
-And repeat
-
-    until finished
-
-End with an example of getting some data out of the system or using it
-for a little demo
-
-## Running the tests
-
-Explain how to run the automated tests for this system
-
-### Sample Tests
-
-Explain what these tests test and why
-
-    Give an example
-
-### Style test
-
-Checks if the best practices and the right coding style has been used.
-
-    Give an example
-
-## Deployment
-
-Add additional notes to deploy this on a live system
-
-## Built With
-
-  - [Contributor Covenant](https://www.contributor-covenant.org/) - Used
-    for the Code of Conduct
-  - [Creative Commons](https://creativecommons.org/) - Used to choose
-    the license
-
-## Contributing
-
-Please read [CONTRIBUTING.md](CONTRIBUTING.md) for details on our code
-of conduct, and the process for submitting pull requests to us.
-
-## Versioning
-
-We use [Semantic Versioning](http://semver.org/) for versioning. For the versions
-available, see the [tags on this
-repository](https://github.com/PurpleBooth/a-good-readme-template/tags).
-
-## Authors
-
-  - **Billie Thompson** - *Provided README Template* -
-    [PurpleBooth](https://github.com/PurpleBooth)
-
-See also the list of
-[contributors](https://github.com/PurpleBooth/a-good-readme-template/contributors)
-who participated in this project.
 
 ## License
 
 This project is licensed under the [CC0 1.0 Universal](LICENSE.md)
 Creative Commons License - see the [LICENSE.md](LICENSE.md) file for
 details
-
-## Acknowledgments
-
-  - Hat tip to anyone whose code is used
-  - Inspiration
-  - etc

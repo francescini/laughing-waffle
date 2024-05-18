@@ -16,23 +16,23 @@ A fault tree has been created for potential LLM failures [here](fault_tree_diagr
 * **Basic Causes:** Further breaks down into more specific causes, identifying root issues that contribute to each intermediate failure.
 
 ### Application
-This fault tree helps identify where to focus safety efforts in the development and deployment of LLMs:
+This fault tree helps identify where to focus safety efforts in the development and deployment of LLMs. By addressing each node in the fault tree, developers can implement safety measures to address potential failures in LLMs.
 
-* **Data Management:** Improve data filtering, anonymization, and bias mitigation.
-* **Model Training:** Implement techniques to reduce model bias and ensure safe outputs.
-* **Security Measures:** Strengthen access controls, encryption, and monitoring to prevent privacy breaches.
-* **Content Moderation:** Enhance post-generation moderation and user feedback mechanisms to catch and address harmful content.
-
-By addressing each node in the fault tree, developers can implement safety measures to address potential failures in LLMs.
 
 ## 2. Failure Modes and Effects Analysis (FMEA)
 FMEA is a method for evaluating processes to identify where and how they might fail and assessing the relative impact of different failures.
 
-Application to LLMs:
+A FMEA has been created for a Large Language Model [here]().
 
-List Potential Failures: Identify various ways LLMs can fail, such as producing inaccurate, biased, or harmful responses.
-Assess Impact and Likelihood: Evaluate the severity, occurrence, and detectability of each failure mode.
-Prioritize Mitigation Strategies: Focus on high-priority issues to implement safety measures like improved training data curation, bias mitigation techniques, and robust validation procedures.
+### Explanation
+**Severity (S):** The seriousness of the failure's effect (1-10 scale).
+**Occurrence (O):** The frequency of the failure cause (1-10 scale).
+**Detection (D):** The likelihood of detecting the failure before it reaches the user (1-10 scale).
+**Risk Priority Number (RPN):** Calculated as \( \text{RPN} = S \times O \times D \). Higher RPN indicates higher priority for addressing the failure.
+
+### Application
+A FMEA helps identify various ways LLMs can fail and evaluate the severity, occurrence, and detectability of each failure mode. From here, mitigation strategies can be prioritised to focus on high-priority issues.
+
 
 ## 3. Hazard Analysis and Critical Control Points (HACCP)
 HACCP is used to identify critical points where hazards might occur and implement control measures to prevent or mitigate these hazards.

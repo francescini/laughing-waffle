@@ -8,7 +8,7 @@ Laaughing Waffle is a repository of systems safety engineering methodologies to 
 ## 1. Fault Tree Analysis (FTA)
 FTA is a top-down approach to identify potential causes of system failures.
 
-A fault tree has been created for potential LLM failures [here](fault_tree_diagram).
+A fault tree has been created for potential Large Language Model failures [here](fault_tree_diagram).
 
 ### Explanation
 * **Top-Level Failure:** Represents the overall potential failure of the LLM.
@@ -37,10 +37,16 @@ A FMEA helps identify various ways LLMs can fail and evaluate the severity, occu
 ## 3. Hazard Analysis and Critical Control Points (HACCP)
 HACCP is used to identify critical points where hazards might occur and implement control measures to prevent or mitigate these hazards.
 
-Application to LLMs:
+An illustrative HACCP plan for a Large Language Model [here]()
 
-Identify Critical Points: Determine stages in the LLM lifecycle where hazards might arise, such as data collection, model training, or deployment.
-Establish Control Measures: Implement controls such as filtering training data, continuous monitoring of model outputs, and human oversight in critical applications.
+### Explanation
+* The HACCP plan includes a hazard analysis that identifies potential hazards at each stage of the LLM lifecycle, such as data collection, preprocessing, model training, evaluation, deployment, user interaction, and monitoring and maintenance, along with corresponding control measures.
+
+* It establishes critical control points (CCPs) with specific critical limits, monitoring procedures, verification procedures, corrective actions, and record-keeping protocols to ensure the model's safety, reliability, and compliance throughout its development and deployment.
+
+### Application
+
+A HACCP plan can be used to systematically identify potential hazards at each stage of the LLM's lifecycle and implementing critical control points to mitigate these risks. This helps the model's safety, reliability, and compliance by continuously monitoring, verifying, and updating the processes based on predefined critical limits.
 
 ## 4. Preliminary Hazard Analysis (PHA)
 PHA is an early-phase risk assessment tool used to identify potential hazards and analyze the severity of their consequences.

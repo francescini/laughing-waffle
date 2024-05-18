@@ -8,7 +8,7 @@ Laaughing Waffle is a repository of systems safety engineering methodologies to 
 ## 1. Fault Tree Analysis (FTA)
 FTA is a top-down approach to identify potential causes of system failures.
 
-An fault tree has been created for potential LLM failures [here].
+An fault tree has been created for potential LLM failures [here](fault_tree_diagram).
 
 ### Explanation
 * **Top-Level Failure:** Represents the overall potential failure of the LLM.

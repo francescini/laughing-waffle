@@ -37,7 +37,7 @@ A FMEA helps identify various ways LLMs can fail and evaluate the severity, occu
 ## 3. Hazard Analysis and Critical Control Points (HACCP)
 HACCP is used to identify critical points where hazards might occur and implement control measures to prevent or mitigate these hazards.
 
-An illustrative HACCP plan for a Large Language Model [here]()
+An illustrative HACCP plan for a Large Language Model [here](HACCP_plan_for_LLM)
 
 ### Explanation
 * The HACCP plan includes a hazard analysis that identifies potential hazards at each stage of the LLM lifecycle, such as data collection, preprocessing, model training, evaluation, deployment, user interaction, and monitoring and maintenance, along with corresponding control measures.

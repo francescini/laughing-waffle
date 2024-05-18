@@ -23,7 +23,7 @@ This fault tree helps identify where to focus safety efforts in the development 
 * **Security Measures:** Strengthen access controls, encryption, and monitoring to prevent privacy breaches.
 * **Content Moderation:** Enhance post-generation moderation and user feedback mechanisms to catch and address harmful content.
 
-By systematically addressing each node in the fault tree, developers can implement robust safety measures to mitigate potential failures in LLMs.
+By addressing each node in the fault tree, developers can implement safety measures to address potential failures in LLMs.
 
 ## 2. Failure Modes and Effects Analysis (FMEA)
 FMEA is a systematic method for evaluating processes to identify where and how they might fail and assessing the relative impact of different failures.

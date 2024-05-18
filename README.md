@@ -51,7 +51,9 @@ A HACCP plan can be used to systematically identify potential hazards at each st
 ## 4. Preliminary Hazard Analysis (PHA)
 PHA is an early-phase risk assessment tool used to identify potential hazards and analyze the severity of their consequences.
 
-Application to LLMs:
+An illustrative PHA plan for a Large Language Model is [here](PHA_for_LLM.md).
+
+### Explanation
 
 Early Risk Identification: Conduct a PHA during the design phase of the LLM to identify potential hazards related to data bias, misinformation, or ethical concerns.
 Mitigation Planning: Develop mitigation strategies early in the development process to address identified hazards.

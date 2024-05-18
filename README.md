@@ -22,13 +22,13 @@ This fault tree helps identify where to focus safety efforts in the development 
 ## 2. Failure Modes and Effects Analysis (FMEA)
 FMEA is a method for evaluating processes to identify where and how they might fail and assessing the relative impact of different failures.
 
-A FMEA has been created for a Large Language Model [here]().
+A FMEA has been created for a Large Language Model [here](FMEA_for_LLM.md).
 
 ### Explanation
-**Severity (S):** The seriousness of the failure's effect (1-10 scale).
-**Occurrence (O):** The frequency of the failure cause (1-10 scale).
-**Detection (D):** The likelihood of detecting the failure before it reaches the user (1-10 scale).
-**Risk Priority Number (RPN):** Calculated as \( \text{RPN} = S \times O \times D \). Higher RPN indicates higher priority for addressing the failure.
+* **Severity (S):** The seriousness of the failure's effect (1-10 scale).
+* **Occurrence (O):** The frequency of the failure cause (1-10 scale).
+* **Detection (D):** The likelihood of detecting the failure before it reaches the user (1-10 scale).
+* **Risk Priority Number (RPN):** Calculated as \( \text{RPN} = S \times O \times D \). Higher RPN indicates higher priority for addressing the failure.
 
 ### Application
 A FMEA helps identify various ways LLMs can fail and evaluate the severity, occurrence, and detectability of each failure mode. From here, mitigation strategies can be prioritised to focus on high-priority issues.

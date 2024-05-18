@@ -11,17 +11,17 @@ FTA is a top-down approach to identify potential causes of system failures.
 An fault tree has been created for potential LLM failures [here].
 
 ### Explanation
-**Top-Level Failure:** Represents the overall potential failure of the LLM.
-**Intermediate Failures:** Breaks down into major failure modes: generating harmful content, privacy breaches, and biased outputs.
-**Basic Causes:** Further breaks down into more specific causes, identifying root issues that contribute to each intermediate failure.
+* **Top-Level Failure:** Represents the overall potential failure of the LLM.
+* **Intermediate Failures:** Breaks down into major failure modes: generating harmful content, privacy breaches, and biased outputs.
+* **Basic Causes:** Further breaks down into more specific causes, identifying root issues that contribute to each intermediate failure.
 
 ### Application
 This fault tree helps identify where to focus safety efforts in the development and deployment of LLMs:
 
-**Data Management:** Improve data filtering, anonymization, and bias mitigation.
-**Model Training:** Implement techniques to reduce model bias and ensure safe outputs.
-**Security Measures:** Strengthen access controls, encryption, and monitoring to prevent privacy breaches.
-**Content Moderation:** Enhance post-generation moderation and user feedback mechanisms to catch and address harmful content.
+* **Data Management:** Improve data filtering, anonymization, and bias mitigation.
+* **Model Training:** Implement techniques to reduce model bias and ensure safe outputs.
+* **Security Measures:** Strengthen access controls, encryption, and monitoring to prevent privacy breaches.
+* **Content Moderation:** Enhance post-generation moderation and user feedback mechanisms to catch and address harmful content.
 
 By systematically addressing each node in the fault tree, developers can implement robust safety measures to mitigate potential failures in LLMs.
 

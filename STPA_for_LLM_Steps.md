@@ -35,23 +35,141 @@
 * Maintenance & Updates: Regular updates to model algorithms, data, and operational software to improve performance and security.
 
 ## Control Loops
-Graph diagram to show the relationships between the control components [here]
+Graph diagram to show the relationships between the control components [here](control_diagram_generator.py).
 
-Step 3: Identify Unsafe Control Actions
-Define Unsafe Actions: Determine what constitutes unsafe control actions (UCAs) in the context of the LLM. This could include generating biased responses, failing to respect user data privacy, or providing incorrect information.
-Link UCAs to Hazards: Connect each UCA to potential hazards, detailing the specific safety impacts of each action.
-Step 4: Analyze Control Loops for UCAs
+# Step 3: Identify Unsafe Control Actions
+# Unsafe Control Actions for Large Language Model (LLM)
+
+This document outlines potential Unsafe Control Actions (UCAs) within a Large Language Model like ChatGPT, including their impacts and necessary control actions within the system's control structure.
+
+## Unsafe Control Actions (UCAs)
+
+### 1. Incorrect or Inappropriate Response Generation
+- **UCA**: The model generates harmful, offensive, or inappropriate content.
+- **Hazard**: Damage to user trust or emotional harm to users; potential legal and reputational consequences.
+- **Control Action**: Implement filters and checks in the User Interface (UI) and Output Processing (OP) to ensure content appropriateness.
+
+### 2. Data Privacy Breaches
+- **UCA**: Unauthorized access to or disclosure of user data.
+- **Hazard**: Breach of privacy, legal repercussions, loss of user trust.
+- **Control Action**: Robust data encryption and access controls in Data Management (DM) to protect user data.
+
+### 3. Failure to Update Models with Current Information
+- **UCA**: The model provides outdated or incorrect information due to lack of updates.
+- **Hazard**: Misinformation leading to user making poor decisions based on outdated data.
+- **Control Action**: Regular updates and verification of the information database by the Maintenance & Updates (MU) component.
+
+### 4. Model Bias
+- **UCA**: Model decisions or outputs are biased due to biased training data or algorithms.
+- **Hazard**: Unfair treatment of individuals or groups, potential discrimination and legal issues.
+- **Control Action**: Regular audit and update of training datasets and algorithms by Input Processing (IP) and Language Model (Core) (LM).
+
+### 5. Over-reliance on Automation
+- **UCA**: Users rely too heavily on the LLM for decisions without critical oversight.
+- **Hazard**: Poor decision-making based on incorrect or incomplete model advice.
+- **Control Action**: Clear communication of the model’s limitations and the need for human oversight.
+
+### 6. Lack of Effective Feedback Mechanisms
+- **UCA**: Inadequate mechanisms for collecting and incorporating user feedback.
+- **Hazard**: Continuous propagation of model errors and slow response to emerging issues.
+- **Control Action**: Implementation of effective and responsive Feedback System (FD).
+
+### 7. Inadequate Handling of High-load Situations
+- **UCA**: System fails to handle high-load situations, leading to delayed or failed responses.
+- **Hazard**: Reduced system reliability and user dissatisfaction.
+- **Control Action**: Scalable architecture and load management strategies in the Maintenance & Updates (MU).
+
+### 8. Insufficient Security Measures
+- **UCA**: Inadequate security measures leading to system vulnerabilities.
+- **Hazard**: Exposure to cyber-attacks, unauthorized access, and data theft.
+- **Control Action**: Implementation of state-of-the-art cybersecurity practices and regular security audits by Security Systems (SEC).
+
+## Integration into Control Structure
+Each UCA is integrated into the control loop by assigning specific safety actions at various system operations points to prevent unsafe conditions.
+
+| UCA Category                           | Safety Actions by Operational Points                                                   |
+|----------------------------------------|----------------------------------------------------------------------------------------|
+| **Incorrect or Inappropriate Response Generation** | - Implement content filters in the UI. <br> - Apply advanced NLP techniques in Output Processing to detect and modify inappropriate content. <br> - Regular audits of response accuracy and appropriateness. |
+| **Data Privacy Breaches**              | - Encrypt all user data handled by Data Management. <br> - Implement strict access controls and authentication measures in Data Management and UI. <br> - Regular security training for personnel involved in data handling. |
+| **Failure to Update Models with Current Information** | - Schedule regular updates for the Language Model (Core) from verified sources. <br> - Implement a system in Maintenance & Updates to verify the relevance and accuracy of data sources. <br> - Create alerts for outdated information detection in the Language Model. |
+| **Model Bias**                         | - Conduct periodic bias audits in Input Processing and Language Model (Core). <br> - Use diverse data sets in training to minimize bias. <br> - Engage third-party audits to ensure unbiased model operation. |
+| **Over-reliance on Automation**        | - Design user interfaces to clearly communicate the model’s limitations. <br> - Incorporate prompts reminding users of the need for human oversight. <br> - Provide detailed documentation and user training on the model’s use. |
+| **Lack of Effective Feedback Mechanisms** | - Implement a robust feedback system that is easy to use and highly visible. <br> - Analyze feedback regularly in the Feedback System to improve model responses. <br> - Use feedback to train and refine the model in the Language Model (Core). |
+| **Inadequate Handling of High-load Situations** | - Design scalable system architecture in Maintenance & Updates to manage high load. <br> - Implement load balancing techniques in Operational Infrastructure. <br> - Monitor system performance continuously and adjust resources as needed. |
+| **Insufficient Security Measures**     | - Employ state-of-the-art cybersecurity measures in Security Systems. <br> - Regularly update security protocols and systems in Maintenance & Updates. <br> - Conduct frequent security audits and penetration testing. |
+
+
+# Step 4: Analyze Control Loops for UCAs
 Analyze Inadequate Control: Look for where control might be lost, such as during high server load or when learning from biased data inputs.
 Identify Ineffective Feedback: Examine whether the feedback mechanisms to the LLM (like user feedback on responses) are effective in correcting or preventing UCAs.
-Step 5: Determine Causal Scenarios for UCAs
-Develop Scenarios: Describe scenarios in which UCAs could lead to hazards. For example, how might a failure to filter sensitive information result in privacy breaches?
-Assess Context: Consider how different contexts or modes of operation could affect the likelihood of UCAs leading to hazards.
-Step 6: Create Safety Constraints and Requirements
-Define Safety Constraints: Create specific constraints that the system must adhere to avoid UCAs, like constraints on data use or content generation.
-Develop Requirements: Translate these constraints into actionable design, operational, and training requirements.
-Step 7: Create an Incremental Safety Assurance Argument
-Document Safety Case: Develop a comprehensive safety case that includes all findings, analysis, and mitigation strategies.
-Ongoing Assurance: Plan for continuous monitoring and reassessment of the system as it evolves and as operational experience accumulates.
-Implementation
-Apply Mitigation Strategies: Implement the designed controls, modify system behaviors, and introduce new processes or technologies as needed.
-Monitor and Adjust: Continuously monitor the system’s performance against safety metrics and adjust controls as necessary to maintain safety integrity.
+
+This table provides an analysis of the control loops associated with each identified Unsafe Control Action (UCA), highlighting potential weaknesses and necessary actions to mitigate risks within the Large Language Model system.
+
+| UCA Category                                | Control Components                        | Control Loop Analysis                                                                                                                                                                  |
+|---------------------------------------------|------------------------------------------|----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| **Incorrect or Inappropriate Response Generation** | UI, OP, LM                                | Control must ensure robust content filtering and NLP checks to detect and modify inappropriate outputs. Feedback on content appropriateness needs effective capture and processing.   |
+| **Data Privacy Breaches**                   | DM, SEC                                   | Control actions must enforce strict privacy and security measures, with continuous monitoring and adjustment based on security threats. Immediate response to breaches is critical.   |
+| **Failure to Update Models with Current Information** | MU, LM                                   | Scheduled updates and systematic verification of content relevance and accuracy are required. Feedback from performance and user interactions should inform update frequency.           |
+| **Model Bias**                              | IP, LM                                    | Continuous monitoring and adjustment of data inputs and model algorithms are needed. Feedback systems should capture and address instances of bias.                                  |
+| **Over-reliance on Automation**             | UI, LM                                    | Clear communication of system limitations and the necessity for human oversight is essential. User feedback on understanding and experiences should refine information presentation.  |
+| **Lack of Effective Feedback Mechanisms**   | FD, LM                                    | Feedback mechanisms must actively incorporate user insights into system improvements. Robust data collection, analysis, and application strategies are required.                     |
+| **Inadequate Handling of High-load Situations** | MU, Operational Infrastructure          | Control must include dynamic resource allocation and load balancing strategies. System performance monitoring feedback should drive rapid resource adjustments.                      |
+| **Insufficient Security Measures**          | SEC, MU                                   | Implementation and continuous updating of security protocols are crucial. Feedback from security audits and incident reports should guide iterative strengthening of security measures.|
+
+# Step 5: Determine Causal Scenarios for UCAs
+
+| UCA Category                                | Causal Scenarios                                                                                                                                            |
+|---------------------------------------------|-------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| **Incorrect or Inappropriate Response Generation** | 1. A user inputs slang or ambiguous text that the model misinterprets, leading to inappropriate or offensive outputs. <br> 2. Model filters fail to screen out sensitive content due to a software bug.  |
+| **Data Privacy Breaches**                   | 1. An unauthorized actor exploits a security vulnerability to access user data. <br> 2. User data is inadvertently exposed during a software update process. |
+| **Failure to Update Models with Current Information** | 1. The update mechanism is disabled due to a configuration error, leading to outdated information being used. <br> 2. New, relevant data sources are overlooked due to inadequate review processes. |
+| **Model Bias**                              | 1. The training dataset contains inherent biases not identified during the data preparation phase. <br> 2. An update introduces bias because it was tested on a non-representative sample.       |
+| **Over-reliance on Automation**             | 1. Users assume the model's suggestions are always correct, using them as the sole basis for critical decisions without verification. <br> 2. Lack of clear disclaimers about the model's limitations leads to overconfidence. |
+| **Lack of Effective Feedback Mechanisms**   | 1. Feedback provided by users is not integrated into the model's learning loop due to a technical malfunction. <br> 2. The model does not prompt users effectively for feedback, leading to a lack of data on errors. |
+| **Inadequate Handling of High-load Situations** | 1. The system does not scale appropriately during peak usage, causing slow responses and timeouts. <br> 2. Insufficient server capacity planned based on inaccurate usage forecasting.         |
+| **Insufficient Security Measures**          | 1. Security measures are outdated and fail to block a new type of cyber-attack. <br> 2. Regular security updates are skipped or delayed, leading to vulnerabilities.                      |
+
+# Step 6: Create Safety Constraints and Requirements
+
+| UCA Category                                | Safety Constraints                                                                      | Requirements                                                                                                  |
+|---------------------------------------------|----------------------------------------------------------------------------------------|---------------------------------------------------------------------------------------------------------------|
+| **Incorrect or Inappropriate Response Generation** | Constraint: The system must prevent the generation of harmful or offensive content. | Requirement: Implement advanced content filtering algorithms and manual review processes in the output stage. |
+| **Data Privacy Breaches**                   | Constraint: Ensure all user data is handled with the highest level of security.     | Requirement: Encrypt all data in transit and at rest, enforce strict access controls, and conduct regular security audits. |
+| **Failure to Update Models with Current Information** | Constraint: The model must use the most current and accurate information available. | Requirement: Automate data updates, establish a regular review process for data relevance, and integrate real-time data sources where possible. |
+| **Model Bias**                              | Constraint: Outputs must be free from any form of bias that could lead to discrimination. | Requirement: Regularly audit training data and model outputs for bias, retrain models with corrected and diverse datasets. |
+| **Over-reliance on Automation**             | Constraint: The system should clearly communicate its limitations to users.        | Requirement: Include clear user guidance on the model’s capabilities and limitations, and provide context-specific disclaimers. |
+| **Lack of Effective Feedback Mechanisms**   | Constraint: Feedback must be effectively captured and utilized to improve the system. | Requirement: Develop and maintain a robust feedback integration system that actively adapts the model based on user inputs. |
+| **Inadequate Handling of High-load Situations** | Constraint: The system must maintain performance under high demand.               | Requirement: Implement scalable infrastructure and load balancing strategies, conduct stress testing regularly. |
+| **Insufficient Security Measures**          | Constraint: Security measures must be capable of defending against current cyber threats. | Requirement: Stay updated with the latest cybersecurity technologies and practices, schedule frequent security training for all staff involved. |
+
+# Step 7: Create an Incremental Safety Assurance Argument
+
+## Safety Case Documentation
+
+The safety case for the LLM includes comprehensive findings from the hazard analysis, control loop analysis, and causal scenarios for each identified Unsafe Control Action (UCA). Key components of the safety case include:
+
+- **Safety Constraints**: Defined constraints that ensure system operations prevent UCAs.
+- **Safety Requirements**: Specific requirements derived from safety constraints to guide design, operation, and training.
+- **Mitigation Strategies**: Actions taken to mitigate risks identified during the analysis, including technical solutions, process improvements, and behavioral controls.
+- **Performance Indicators**: Metrics established to monitor the effectiveness of implemented safety measures and identify potential areas for improvement.
+
+## Ongoing Assurance Plan
+
+To maintain and improve the safety of the LLM, an ongoing assurance plan is used. This plan includes:
+
+- **Continuous Monitoring**: Implementing tools and processes to continuously monitor the system's performance against established safety metrics.
+- **Regular Audits and Reviews**: Conducting regular audits of the system’s operations and safety controls to ensure compliance with safety requirements and to uncover any new risks.
+- **Feedback Integration**: Utilizing user feedback and incident reports to refine safety measures and adjust system behaviors as necessary.
+- **Update and Refinement Cycle**: Periodically updating the safety case to reflect new findings, technological advancements, and changes in operational practices.
+
+## Implementation Strategies
+
+- **Apply Mitigation Strategies**: Execute the planned technical and procedural controls designed to mitigate identified risks.
+  - Deploy advanced filtering algorithms to prevent inappropriate content generation.
+  - Enhance data security measures through encryption and rigorous access controls.
+  - Update infrastructure to handle high-load scenarios effectively.
+
+- **Monitor and Adjust**:
+  - **Performance Monitoring**: Use automated systems to monitor the system’s performance in real-time, focusing on response accuracy, system latency, and user satisfaction.
+  - **Adjustment Protocols**: Establish protocols to swiftly implement adjustments based on monitoring results and feedback analysis. This includes software updates, configuration changes, and retraining of the model with improved or updated datasets.
+

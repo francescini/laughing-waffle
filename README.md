@@ -84,6 +84,9 @@ STPA is a safety analysis methodology based on systems theory and system thinkin
 
 ### Explanation
 
+A detailed list of the steps in a STPA can be found [here]
+An example control structure for a LLM can be found [here]
+
 ### Application
 
 * Control Actions Analysis: Identify unsafe control actions in the LLM's decision-making processes, such as inappropriate content generation.
@@ -93,11 +96,13 @@ STPA is a safety analysis methodology based on systems theory and system thinkin
 ## 7. Safety Case Development
 A safety case is a structured argument, supported by evidence, that a system is safe for a specific application in a specific environment.
 
-Application to LLMs:
+An example safety case for an LLM is [here]
 
-Develop Safety Cases: Create safety cases for different use scenarios of LLMs, such as customer service, medical advice, or content moderation.
-Evidence Collection: Gather evidence from testing, validation, and operational data to support safety claims.
-Continuous Evaluation: Regularly update the safety case as new data and insights are gained from LLM deployment and use.
+### Application
+
+* Develop Safety Cases: Create safety cases for different use scenarios of LLMs, such as customer service, medical advice, or content moderation.
+* Evidence Collection: Gather evidence from testing, validation, and operational data to support safety claims.
+* Continuous Evaluation: Regularly update the safety case as new data and insights are gained from LLM deployment and use.
 
 
 ## License

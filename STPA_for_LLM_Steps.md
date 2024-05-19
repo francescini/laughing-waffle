@@ -1,17 +1,15 @@
 
-Step 1: Define the Purpose of the Analysis
-Establish Goals: Define what safety means for the LLM, including preventing misinformation, ensuring privacy, and avoiding generating harmful content.
-Identify the System Boundaries: Determine what will be included in the analysis, such as input mechanisms, the model itself, output processes, and interaction with users.
+# Step 1: Define the Purpose of the Analysis
 
-Goals of the LLM
-Accuracy: Deliver reliable and accurate information in response to user queries.
+## Goals of the LLM
+* Accuracy: Deliver reliable and accurate information in response to user queries.
 Ethical Response: Ensure the model's outputs are ethical, non-discriminatory, and do not propagate biases.
 User Privacy: Maintain the confidentiality and integrity of user data and interactions.
 Accessibility: Provide services that are easily accessible and usable by a diverse set of users, including those with disabilities.
 Resilience: Operate effectively under various conditions without degradation in performance, especially under high demand.
 Compliance: Adhere to applicable legal and regulatory requirements related to data security, user privacy, and content generation.
 
-System Boundaries for the LLM
+## System Boundaries for the LLM
 Input Mechanisms: Includes the interfaces through which users interact with the LLM (e.g., web interfaces, API endpoints) and the data input processes.
 Core Processing: The deep learning models, algorithms, and computational processes that analyze inputs and generate responses. This includes model architecture, training methods, and update mechanisms.
 Output Mechanisms: How the model’s responses are delivered to the user, which may involve text outputs, speech synthesis, or integration with other applications.

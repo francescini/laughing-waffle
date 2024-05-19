@@ -80,13 +80,15 @@ An example Human Reliability Analysis table is [here](HRA_for_LLM.md).
 * Design for Safety: Develop user interfaces and interaction protocols that minimize the risk of misinterpretation or misuse of LLM outputs.
 
 ## 6. System-Theoretic Process Analysis (STPA)
-STPA is a methodology for identifying unsafe control actions and analyzing how system interactions can lead to hazards.
+STPA is a safety analysis methodology based on systems theory and system thinking for identifying unsafe control actions and analyzing how system interactions can lead to hazards. It is used to identify hazards in complex systems, particularly where traditional methods like FMEA (Failure Modes and Effects Analysis) may not capture systemic risks effectively. It is particularly relevant in the context of integrated systems with complex interactions, such as in aerospace, automotive, nuclear power, and healthcare technologies.
 
-Application to LLMs:
+### Explanation
 
-Control Actions Analysis: Identify unsafe control actions in the LLM's decision-making processes, such as inappropriate content generation.
-Interaction Analysis: Analyze interactions between the LLM and other system components (e.g., users, external systems) to identify potential safety risks.
-Implement Controls: Design controls to prevent or mitigate identified unsafe actions and interactions.
+### Application
+
+* Control Actions Analysis: Identify unsafe control actions in the LLM's decision-making processes, such as inappropriate content generation.
+* Interaction Analysis: Analyze interactions between the LLM and other system components (e.g., users, external systems) to identify potential safety risks.
+* Implement Controls: Design controls to prevent or mitigate identified unsafe actions and interactions.
 
 ## 7. Safety Case Development
 A safety case is a structured argument, supported by evidence, that a system is safe for a specific application in a specific environment.

@@ -1,3 +1,5 @@
+### Control Structure
+
 | Control Process          | Controller              | Controlled Process              | Feedback Mechanisms                        |
 |--------------------------|-------------------------|---------------------------------|--------------------------------------------|
 | **Data Collection**      | Data Engineers          | Data sourcing and collection    | Data quality reports                       |
@@ -8,9 +10,7 @@
 | **User Interaction**     | End Users               | Interaction with the LLM        | User feedback, interaction logs            |
 | **Monitoring and Maintenance** | Maintenance Team     | Ongoing system monitoring and updates | Performance monitoring reports, anomaly detection alerts |
 
-## 3. Identify Unsafe Control Actions (UCAs)
-
-### 3.1 Unsafe Control Actions
+### Unsafe Control Actions
 
 | Control Action           | Unsafe Control Action (UCA) Description                            | Potential Hazards                                      |
 |--------------------------|-------------------------------------------------------------------|--------------------------------------------------------|
@@ -28,9 +28,8 @@
 | **Monitoring and Maintenance** | Failing to detect and address model degradation                 | Reduced model performance over time                    |
 |                          | Inadequate response to identified issues                          | Persistent problems, user dissatisfaction               |
 
-## 4. Causal Analysis of Unsafe Control Actions
 
-### 4.1 Analysis of Causes and Contributing Factors
+### Analysis of Causes and Contributing Factors
 
 | Unsafe Control Action (UCA) | Potential Causes and Contributing Factors                           | Mitigation Strategies                                         |
 |-----------------------------|---------------------------------------------------------------------|--------------------------------------------------------------|
@@ -48,9 +47,8 @@
 | **Failure to detect/address model degradation** | Inadequate monitoring systems, lack of regular updates                       | Continuous monitoring, regular updates, anomaly detection      |
 | **Inadequate response to identified issues** | Lack of clear protocols, inadequate resources                               | Develop clear issue response protocols, ensure timely updates |
 
-## 5. Develop Safety Constraints
 
-### 5.1 Safety Constraints and Requirements
+### Safety Constraints
 
 | Unsafe Control Action (UCA) | Safety Constraints                                      |
 |-----------------------------|---------------------------------------------------------|
@@ -68,44 +66,44 @@
 | **Failure to detect/address model degradation** | Implement continuous monitoring and regular updates               |
 | **Inadequate response to identified issues** | Develop clear response protocols and ensure timely updates        |
 
-## 6. Recommendations and Mitigation Strategies
+## Mitigation Strategies
 
-### 6.1 Data Collection
+### 1 Data Collection
 - **Mitigation Strategies:**
   - Implement strict data sourcing protocols.
   - Conduct regular audits to ensure data quality and diversity.
 
-### 6.2 Data Preprocessing
+### 2 Data Preprocessing
 - **Mitigation Strategies:**
   - Apply robust anonymization techniques.
   - Use automated tools and conduct peer reviews for data cleaning.
 
-### 6.3 Model Training
+### 3 Model Training
 - **Mitigation Strategies:**
   - Ensure training datasets are diverse and representative.
   - Use automated parameter tuning tools and cross-validation.
 
-### 6.4 Model Evaluation
+### 4 Model Evaluation
 - **Mitigation Strategies:**
   - Train evaluators to correctly interpret evaluation metrics.
   - Use multiple evaluation metrics for comprehensive assessment.
 
-### 6.5 Deployment
+### 5 Deployment
 - **Mitigation Strategies:**
   - Implement strong security measures and conduct regular security audits.
   - Conduct thorough configuration testing and use standardized configurations.
 
-### 6.6 User Interaction
+### 6 User Interaction
 - **Mitigation Strategies:**
   - Implement user authentication and continuous usage monitoring.
   - Provide detailed documentation and interactive help features.
 
-### 6.7 Monitoring and Maintenance
+### 7 Monitoring and Maintenance
 - **Mitigation Strategies:**
   - Implement continuous monitoring and regular updates.
   - Use anomaly detection systems to identify and address issues promptly.
 
-### 6.8 General Recommendations
+### 8 General Recommendations
 - Develop a comprehensive training program for all personnel involved.
 - Establish clear protocols and guidelines for all stages of the LLM lifecycle.
 - Continuously update and improve the LLM based on feedback and monitoring data.

@@ -84,7 +84,7 @@ STPA is a safety analysis methodology based on systems theory and system thinkin
 
 ### Explanation
 
-A detailed list of the steps in a STPA for an example LLM can be found [here]
+A detailed list of the steps in a STPA for an example LLM can be found [here](STPA_for_LLM_Steps.md).
 
 An example graph based control diagram for a LLM can be found [here](STPA_for_LLM_Control_Structure.md).
 

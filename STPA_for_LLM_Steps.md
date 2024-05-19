@@ -34,7 +34,8 @@
 * Regulatory Compliance: Ensures all operations comply with relevant laws and regulations.
 * Maintenance & Updates: Regular updates to model algorithms, data, and operational software to improve performance and security.
 
-Diagram the Control Loops: Create diagrams showing how control is exerted over the LLM, how feedback is processed, and how external factors influence the system.
+## Control Loops
+Graph diagram to show the relationships between the control components [here]
 
 Step 3: Identify Unsafe Control Actions
 Define Unsafe Actions: Determine what constitutes unsafe control actions (UCAs) in the context of the LLM. This could include generating biased responses, failing to respect user data privacy, or providing incorrect information.

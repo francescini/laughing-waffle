@@ -73,7 +73,7 @@ Deployment
 User Interaction
 Monitoring and Maintenance
 
-An example Human Reliability Analysis table is [here]
+An example Human Reliability Analysis table is [here](HRA_for_LLM.md).
 
 ### Application
 * User Interaction Analysis: Evaluate how users interact with LLMs and identify potential areas where human error could lead to unsafe outcomes.

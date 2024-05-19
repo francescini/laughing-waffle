@@ -61,10 +61,23 @@ Mitigation Planning: Develop mitigation strategies early in the development proc
 ## 5. Human Reliability Analysis (HRA)
 HRA focuses on understanding the potential for human error within a system and designing systems to reduce these errors.
 
-Application to LLMs:
+### Explanation
 
-User Interaction Analysis: Evaluate how users interact with LLMs and identify potential areas where human error could lead to unsafe outcomes.
-Design for Safety: Develop user interfaces and interaction protocols that minimize the risk of misinterpretation or misuse of LLM outputs.
+The critical tasks for the LLM involve:
+
+Data Collection
+Data Preprocessing
+Model Training
+Model Evaluation
+Deployment
+User Interaction
+Monitoring and Maintenance
+
+An example Human Reliability Analysis table is [here]
+
+### Application
+* User Interaction Analysis: Evaluate how users interact with LLMs and identify potential areas where human error could lead to unsafe outcomes.
+* Design for Safety: Develop user interfaces and interaction protocols that minimize the risk of misinterpretation or misuse of LLM outputs.
 
 ## 6. System-Theoretic Process Analysis (STPA)
 STPA is a methodology for identifying unsafe control actions and analyzing how system interactions can lead to hazards.

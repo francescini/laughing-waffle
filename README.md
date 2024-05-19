@@ -93,21 +93,3 @@ An example graph based control diagram for a LLM can be found [here](STPA_for_LL
 * Control Actions Analysis: Identify unsafe control actions in the LLM's decision-making processes, such as inappropriate content generation.
 * Interaction Analysis: Analyze interactions between the LLM and other system components (e.g., users, external systems) to identify potential safety risks.
 * Implement Controls: Design controls to prevent or mitigate identified unsafe actions and interactions.
-
-## 7. Safety Case Development
-A safety case is a structured argument, supported by evidence, that a system is safe for a specific application in a specific environment.
-
-An example safety case for an LLM is [here]
-
-### Application
-
-* Develop Safety Cases: Create safety cases for different use scenarios of LLMs, such as customer service, medical advice, or content moderation.
-* Evidence Collection: Gather evidence from testing, validation, and operational data to support safety claims.
-* Continuous Evaluation: Regularly update the safety case as new data and insights are gained from LLM deployment and use.
-
-
-## License
-
-This project is licensed under the [CC0 1.0 Universal](LICENSE.md)
-Creative Commons License - see the [LICENSE.md](LICENSE.md) file for
-details
